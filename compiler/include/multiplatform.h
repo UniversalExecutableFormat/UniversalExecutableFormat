@@ -23,5 +23,5 @@ void print(const char* text) {
 }
 
 void print_line(const char* text) {
-    printf("%s\n", text);
+    printf("%s", text, "\n");
 }
