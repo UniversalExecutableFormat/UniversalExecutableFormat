@@ -15,7 +15,7 @@ int main(int argc, char* argv[]) {
 
     for (int i = 1; i < argc; ++i) {
         if (argv[i] == "--version") {
-            print("uefc (UniversalExecutableFormat compiler) ");
+            print("UEFC (UniversalExecutableFormat compiler) ");
             println(COMPILER_VERSION);
             println("Licensed under GPL in version 3.");
         }
