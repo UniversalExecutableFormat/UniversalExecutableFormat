@@ -1,0 +1,12 @@
+# output
+out
+out/compiler
+out/runtime
+
+# compiled fragments
+*.o
+*.so
+
+# vscode and other fucking configuration
+.editorconfig
+.vscode
