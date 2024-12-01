@@ -1,13 +1,9 @@
-# ---------------------------------------------------------------------------------------- #
-#                              Builder for Compiler - Project UEF                          #
-# ---------------------------------------------------------------------------------------- #
 import subprocess as sp
 import platform
 import time
 import sys as os
 
 sys = platform.system()
-print("Welcome to UEF make")
 
 def loading(proc):
     d = ""
@@ -31,7 +27,7 @@ if sys == "Linux" or sys == "Darwin":
         pass
     loading(cmd)
     pass
-    
+
 if sys == "Windows":
     try:
         cmd = sp.Popen([
