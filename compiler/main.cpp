@@ -17,7 +17,7 @@ int main(int argc, char* argv[]) {
         if (argv[i] == "--version") {
             print("UEFC (UniversalExecutableFormat compiler) ");
             println(COMPILER_VERSION);
-            println("Licensed under GPL in version 3.");
+            println("Licensed under GNU General Public License in version 3.");
         }
         if (argv[i] == "--authors") {
             print("Created by UniversalExecutableFormat team (under the leadership of Gorciu).");
