@@ -1,26 +1,27 @@
-#include <version.hpp>
-#include <multiplatform.hpp>
+#include "include/version.hpp"
+#include "include/multiplatform.hpp"
+#include <cstring>
 
 int main(int argc, char* argv[]) {
     set_console_color(7, 0);
 
-    if (argc == 0) {
+    if (argc == 1) {
         print("uefc: ");
         set_console_color(4, 0);
-        print_line("no arguments");
+        println("no arguments");
         set_console_color(7, 0);
-        print_line("tip: you can use `uefc --version` to get compiler version");
+        println("tip: you can use `uefc --version` to get compiler version");
         return 0;
     }
 
     for (int i = 1; i < argc; ++i) {
-        if (argv[i] == "--version") {
+        if (strcmp(argv[i], "--version") == 0) {
             print("UEFC (UniversalExecutableFormat compiler) ");
             println(COMPILER_VERSION);
-            println("Licensed under GNU General Public License in version 3.");
+            println("Licensed under GNU General Public License version 3.");
         }
-        if (argv[i] == "--authors") {
-            print("Created by UniversalExecutableFormat team (under the leadership of Gorciu).");
+        if (strcmp(argv[i], "--authors") == 0) {
+            println("Created by UniversalExecutableFormat team (under the leadership of Gorciu).");
         }
     }
 

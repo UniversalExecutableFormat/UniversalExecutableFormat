@@ -22,6 +22,6 @@ void print(const char* text) {
     printf("%s", text);
 }
 
-void print_line(const char* text) {
-    printf("%s", text, "\n");
+void println(const char* text) {
+    printf("%s%s", text, "\n");
 }
