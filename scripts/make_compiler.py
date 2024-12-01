@@ -19,7 +19,7 @@ def loading(proc):
 if sys == "Linux" or sys == "Darwin":
     try:
         cmd = sp.Popen([
-            "gcc", "-c", "../compiler/main.cpp", "-Icompiler/include", "-o", "compiler/main.bin"
+            "gcc", "-c", "compiler/main.cpp", "-Icompiler/include", "-o", "compiler/main.bin"
         ])
     except Exception as err:
         print(f"\033[1;31mError!\033[0;91m Compilation not successful! make sure you have installed all dependencies\033[3m - ErrorCode: {err}\033[0;0m")
@@ -31,7 +31,7 @@ if sys == "Linux" or sys == "Darwin":
 if sys == "Windows":
     try:
         cmd = sp.Popen([
-            "gcc", "-c", "../compiler/main.cpp", "-Icompiler/include", "-o", "compiler/main.exe"
+            "gcc", "-c", "compiler/main.cpp", "-Icompiler/include", "-o", "compiler/main.exe"
         ])
     except Exception as err:
         print(f"Compilation not successful! make sure you have installed all dependencies - ErrorCode: {err}")
