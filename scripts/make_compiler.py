@@ -15,27 +15,29 @@ def loading(proc):
         time.sleep(0.4)
     print(f"\rBuilding compiler... Done!")
     pass
+pass
 
 if sys == "Linux" or sys == "Darwin":
     try:
         cmd = sp.Popen([
-            "gcc", "-c", "compiler/main.cpp", "-Icompiler/include", "-o", "compiler/main.bin"
-        ])
+            "go", "build", "-o", "lunac"
+        ], cwd="../compiler")
     except Exception as err:
         print(f"\033[1;31mError!\033[0;91m Compilation not successful! make sure you have installed all dependencies\033[3m - ErrorCode: {err}\033[0;0m")
         os.exit(249)
         pass
     loading(cmd)
     pass
+pass
 
 if sys == "Windows":
     try:
         cmd = sp.Popen([
-            "gcc", "-c", "compiler/main.cpp", "-Icompiler/include", "-o", "compiler/main.exe"
-        ])
+            "go", "build", "-o", "lunac"
+        ], cwd="../compiler")
     except Exception as err:
         print(f"Compilation not successful! make sure you have installed all dependencies - ErrorCode: {err}")
-        sys.exit(305)
+        os.exit(305)
         pass
     loading(cmd)
     pass

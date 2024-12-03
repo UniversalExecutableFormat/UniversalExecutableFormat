@@ -1,4 +1,4 @@
-### LunaScript compiler
+### LunaCompiler
 
 **LunaScript**, a simple high-level language with a nice syntax, compiled to LBC *(LunaByteCode)* format, just using this compiler.
 
